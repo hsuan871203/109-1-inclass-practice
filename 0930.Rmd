@@ -1,0 +1,16 @@
+---
+title: "0930"
+author: "thorsten"
+date: "9/30/2020"
+output: html_document
+---
+
+```{r}
+library(knitr)
+purl("0930.Rmd")
+```
+
+```{r}
+a <- 2
+```
+
