@@ -1,0 +1,54 @@
+---
+title: '1007'
+author: "thorsten"
+date: "10/7/2020"
+output: html_document
+---
+```{r}
+a<-15
+b<-a
+b
+y<-22
+c<-y
+c
+```
+```{r}
+myName<-"roger"
+
+```
+
+```{r}
+length(myName)
+```
+
+```{r}
+num1 <- 5
+vNum1 <- c(2,5)
+vNum2 <- c(2, num1)
+vNum2
+vNum2
+```
+```{r}
+heightsOftheEntireClassroom <- c()
+
+heightsOftheEntireClassroom2 <- c()
+heightOfAStudentComingInsideTheClassroom <- sample(165:200,1)
+# method 1: concatenate 
+heightsOftheEntireClassroom <-
+  c(
+    heightsOftheEntireClassroom,
+    heightOfAStudentComingInsideTheClassroom
+  )
+# method 2: 
+heightsOftheEntireClassroom2 <-
+  heightOfAStudentComingInsideTheClassroom
+```
+
+```{r}
+c(5,7)
+c("John","Marry")
+c(T,TRUE,F,FALSE)
+c(T,T,F,F)
+```
+
+
