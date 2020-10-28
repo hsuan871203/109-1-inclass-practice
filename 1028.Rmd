@@ -1,0 +1,109 @@
+---
+title: '410776004'
+author: "thorsten"
+date: "10/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+vectorExample <- c("小明", "小英", "大雄")
+
+# 有多少位置可選：
+length(vectorExample)
+vectorExample[[1]]
+vectorExample[[3]]
+listExample <- list(student = "小明", 學期 = list(`108-1` = list(list(name = "個體經濟學", 
+    teacher = "Alice", grade = 85)), `108-2` = list(list(name = "總體經濟學", 
+    teacher = "Mark", grade = 78))))
+# 有多少位置可選：
+length(listExample)
+listExample[[1]]
+listExample[[2]]
+```
+
+```{r}
+names(listExample)
+```
+
+```{r}
+listExample[["student"]]
+listExample$student
+
+listExample[["學期"]]  # 小心不是反頓點喔。
+listExample$學期
+```
+
+```{r}
+vectorExample
+vectorExample[c(1, 3)]
+```
+
+```{r}
+str(listExample, max.level = 1)
+listExample[c(1, 2)]
+```
+
+```{r}
+str(listExample,1)
+```
+
+```{r}
+listExample[c(1,2)]
+listExample[c("student","學業")]
+listExample[c(T,T)]
+```
+
+```{r}
+numVector <- c(2, 3, 6, -1, 4, 2, 6)
+select1 <- numVector[c(1, 4)]
+select1
+select2 <- select1[[1]]
+select2
+
+# 相當於
+numVector[c(1, 4)][[1]]
+```
+```{r}
+select1 <- numVector[c(T, T, F, T, F, F, T)]
+select1
+select2 <- select1[c(1, 4)]
+select2
+
+# 相當於
+numVector[c(T, T, F, T, F, F, T)][c(1, 4)]
+```
+```{r}
+majorsStudent <- c("經濟學系", "經濟學系", "社會學系", "社工系", "經濟學系")
+namesStudent <- c("小英", "小美", "大雄", "阿華", "阿尼")
+genderStudent <- c("F", "F", "M", "F", "M")
+```
+```{r}
+majors
+pickEcon<-c(T,T,F,F,T)
+namesEcon<-namesStudent[pickEcon]
+genderEcon<-genderStudent[pickEcon]
+```
+```{r}
+namesEcon
+genderEcon
+```
+
+```{r}
+today <- list(list("台北市", c(highest_temp = 25), c(lowest_temp = 18)), list("新北市", 
+    c(highest_temp = 24), c(lowest_temp = 15)))
+tomorrow <- list(list("台北市", c(highest_temp = 25), c(lowest_temp = 18)), list("新北市", 
+    c(highest_temp = 24), c(lowest_temp = 15)))
+
+weather <- list(today, tomorrow)
+
+print(weather)
+weather[[1]]
+weather[[1]][[1]][[2]]
+weather[[1]][[1]][[2]][["highest_temp"]]
+
+```
+
