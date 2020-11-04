@@ -1,0 +1,17 @@
+---
+title: '1104'
+author: "thorsten"
+date: "11/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+gender="男"
+school="國立臺北大學"
+title= "問 打工訊息"
+```
+
